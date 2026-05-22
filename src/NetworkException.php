@@ -29,15 +29,15 @@ class NetworkException extends RuntimeException implements NetworkExceptionInter
 {
     private readonly RequestInterface $request;
 
-    public function __construct(RequestInterface $request, string $message = '', int $code = 0, Throwable|null $previous = null)
+    public function __construct(RequestInterface $request, string $message = '', int $code = 0, Throwable | null $previous = null)
     {
         parent::__construct($message, $code, $previous);
 
         $this->request = $request;
     }
 
-    #[NoDiscard]
-    #[Override]
+    #[NoDiscard()]
+    #[Override()]
     public function getRequest(): RequestInterface
     {
         return $this->request;
