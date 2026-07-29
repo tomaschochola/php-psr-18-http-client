@@ -1,3 +1,4 @@
+name: 'php-psr-18-http-client-devcontainer'
 networks:
   devcontainer:
     internal: false
